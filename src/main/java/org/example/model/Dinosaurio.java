@@ -19,7 +19,6 @@ public class Dinosaurio {
     private boolean peligroso;
 
     /*
-     * Constructor:
      * Nuevos dinosaurios.
      */
     public Dinosaurio(String nombre, String especie, int nivelHambre, boolean peligroso) {
@@ -30,7 +29,21 @@ public class Dinosaurio {
         this.peligroso = peligroso;
     }
 
-    // Mostrar información del dinosaurio
+    //Nivel de hambre
+    public void alimentar() {
+
+        nivelHambre -= 20;
+
+        // Evita valores negativos
+        if (nivelHambre < 0) {
+            nivelHambre = 0;
+        }
+
+        System.out.println(nombre + " fue alimentado.");
+        System.out.println("Nivel de hambre actual: " + nivelHambre);
+    }
+
+    // Información del dinosaurio
     public void mostrarInformacion() {
 
         System.out.println("-- DINOSAURIO --");
