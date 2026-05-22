@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.model.Dinosaurio;
+import org.example.model.Turista;
 
 /*
  * Clase principal del sistema
@@ -23,5 +24,9 @@ public class Main {
 
         // Mostrar información
         rex.mostrarInformacion();
+
+        Turista turista = new Turista("Ana", 24, true);
+        turista.mostrarInformacion();
+
     }
 }
