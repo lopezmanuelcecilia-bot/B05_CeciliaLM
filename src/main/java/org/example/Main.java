@@ -4,6 +4,7 @@ import org.example.model.Dinosaurio;
 import org.example.model.Turista;
 import org.example.model.Zona;
 import org.example.service.ParqueService;
+import org.example.events.EventoService;
 
 /*
  * Clase principal del sistema
@@ -18,19 +19,19 @@ public class Main {
 
         // Dinosaurio de prueba
         Dinosaurio rex = new Dinosaurio(
-                "Rex",
-                "Tyrannosaurus Rex",
-                80,
+                "Alo",
+                "Alosaurio",
+                100,
                 true
         );
 
         // Mostrar información
         rex.mostrarInformacion();
 
-        Turista turista = new Turista("Ana", 24, true);
+        Turista turista = new Turista("Elvira", 34, true);
         turista.mostrarInformacion();
 
-        Zona recintoCentral = new Zona("Recinto Central", 5);
+        Zona recintoCentral = new Zona("Recinto C", 5);
 
         recintoCentral.ingresarVisitante();
         recintoCentral.ingresarVisitante();
@@ -39,9 +40,17 @@ public class Main {
 
         ParqueService parqueService = new ParqueService();
 
-        parqueService.venderBoleto("Ana", 45.0);
-        parqueService.venderBoleto("Luis", 45.0);
+        parqueService.venderBoleto("Elvira", 60.0);
+        parqueService.venderBoleto("Victor", 60.0);
 
         parqueService.mostrarIngresos();
+
+        EventoService eventoService = new EventoService();
+
+        System.out.println("\n`` EVENTOS DEL PARQUE ``");
+
+        eventoService.generarEvento();
+        eventoService.generarEvento();
+        eventoService.generarEvento();
     }
 }

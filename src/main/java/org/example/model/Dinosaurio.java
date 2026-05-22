@@ -30,7 +30,7 @@ public class Dinosaurio {
         this.peligroso = peligroso;
     }
 
-    // Método para mostrar información del dinosaurio
+    // Mostrar información del dinosaurio
     public void mostrarInformacion() {
 
         System.out.println("-- DINOSAURIO --");
