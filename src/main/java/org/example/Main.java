@@ -3,6 +3,7 @@ package org.example;
 import org.example.model.Dinosaurio;
 import org.example.model.Turista;
 import org.example.model.Zona;
+import org.example.service.ParqueService;
 
 /*
  * Clase principal del sistema
@@ -36,5 +37,11 @@ public class Main {
 
         recintoCentral.mostrarEstadoZona();
 
+        ParqueService parqueService = new ParqueService();
+
+        parqueService.venderBoleto("Ana", 45.0);
+        parqueService.venderBoleto("Luis", 45.0);
+
+        parqueService.mostrarIngresos();
     }
 }
