@@ -3,9 +3,12 @@ package org.example;
 import org.example.model.Dinosaurio;
 import org.example.model.Turista;
 import org.example.model.Zona;
+import org.example.service.GastoS;
 import org.example.service.ParqueService;
 import org.example.events.EventoService;
 import org.example.config.ConfigS;
+import org.example.model.Empleado;
+import org.example.service.GastoS;
 
 /*
  * Clase principal del sistema
@@ -53,6 +56,18 @@ public class Main {
 
         recintoCentral.ingresarVisitante();
         recintoCentral.ingresarVisitante();
+
+        Empleado empleado = new Empleado(
+                "Victor",
+                "Empleado de Caja 1"
+        );
+        GastoS gastoS = new GastoS();
+
+        gastoS.registrarGasto("Mantenimiento de la planta de energía ", 200.0);
+        gastoS.registrarGasto("Revisión de vehículos ", 80.0);
+        gastoS.mostrarGastos();
+        System.out.println();
+        empleado.mostrarInformacion();
 
         recintoCentral.mostrarEstadoZona();
 

@@ -34,14 +34,15 @@ Se buscó implementar:
 
 - Registro y visualización de dinosaurios.
 - Registro básico de turistas.
-- Sistema de zonas del parque.
-- Venta de boletos.
-- Control básico de visitantes.
-- Sistema de monitoreo del parque.
+- Registro de empleados del parque.
+- Sistema de zonas y control de visitantes.
+- Venta básica de boletos.
+- Registro simple de gastos operativos.
+- Monitoreo general del parque.
 - Alimentación de dinosaurios.
 - Simulación de eventos aleatorios.
-- Organización modular mediante paquetes.
-
+- Configuración mediante application.properties.
+- Organización modular utilizando paquetes y servicios.
 ---
 
 ## Eventos implementados
@@ -61,23 +62,33 @@ Generando un omportamiento más dinámico dentro del sistema.
 ## Estructura del proyecto
 
 ```text
+## Estructura del proyecto
+
+```text
 src/main/java/org/example
 │
 ├── model
 │   ├── Dinosaurio
 │   ├── Turista
-│   └── Zona
+│   ├── Zona
+│   └── Empleado
 │
 ├── service
 │   ├── ParqueService
-│   └── MonitorS
+│   ├── MonitorService
+│   └── GastoService
 │
 ├── events
 │   └── EventoService
 │
 ├── repository
+│   └── EventosR
+│
 ├── config
+│   └── ConfigService
+│
 └── utils
+```
 ```
 
 ---

@@ -1,5 +1,7 @@
 package org.example.events;
 
+import org.example.repository.EventosR;
+
 import java.util.Random;
 
 /*
@@ -8,9 +10,12 @@ import java.util.Random;
 public class EventoService {
 
     private Random random;
+    private EventosR EventosR;
 
     public EventoService() {
+
         random = new Random();
+        EventosR = new EventosR();
     }
 
     /*
@@ -19,6 +24,7 @@ public class EventoService {
     public void generarEvento() {
 
         int numeroEvento = random.nextInt(8);
+        String evento = "";
 
         switch (numeroEvento) {
 
@@ -57,5 +63,7 @@ public class EventoService {
             default:
                 System.out.println("No ocurrió ningún evento.");
         }
+        System.out.println(evento);
+        EventosR.guardarEvento(evento);
     }
 }
